@@ -60,6 +60,13 @@ img {
     max-width: 100%;
 }
 
+p {
+    text-align: justify;
+    text-justify: inter-word;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
 /* ---------- Elementos reutilizables ---------- */
 .container {
     width: min(92%, var(--container-width));
@@ -287,7 +294,11 @@ img {
     border-radius: 8px;
     background: var(--color-surface-alt);
     color: var(--color-primary);
-    font-weight: 800;
+}
+
+.card-icon svg {
+    width: 22px;
+    height: 22px;
 }
 
 .card h3 {
@@ -432,16 +443,6 @@ img {
     color: var(--color-text-soft);
 }
 
-.project-link {
-    color: var(--color-primary);
-    font-weight: 700;
-}
-
-.project-link:hover {
-    color: var(--color-primary-dark);
-    text-decoration: underline;
-}
-
 /* ---------- Contacto ---------- */
 .contact-section {
     padding-top: 70px;
@@ -482,6 +483,9 @@ img {
 }
 
 .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     padding: 14px 18px;
     border: 1px solid var(--color-border);
     border-radius: 8px;
@@ -493,12 +497,19 @@ img {
     transform: translateX(4px);
 }
 
-.contact-item span,
-.contact-item strong {
+.contact-text span,
+.contact-text strong {
     display: block;
 }
 
-.contact-item span {
+.contact-icon {
+    flex: 0 0 auto;
+    width: 20px;
+    height: 20px;
+    color: var(--color-primary);
+}
+
+.contact-text span {
     color: var(--color-text-soft);
     font-size: 0.8rem;
 }
