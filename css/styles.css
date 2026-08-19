@@ -591,6 +591,15 @@ img {
     font-size: 0.88rem;
 }
 
+.footer-content a {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
     .hero-content {
