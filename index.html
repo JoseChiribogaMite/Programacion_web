@@ -43,7 +43,7 @@
 
                 <div class="hero-profile">
                     <div class="profile-placeholder" role="img" aria-label="Espacio para la foto de perfil">
-                        <img src="img/JOSUE_CHIRIBOGA.png" alt="Foto de Josué Chiriboga">
+                        <img src="img/mi-foto.png" alt="Foto de Josué Chiriboga">
                     </div>
                 </div>
             </div>
@@ -217,24 +217,46 @@
                             Si deseas conocer más sobre mi perfil, proyectos o
                             posibilidades de colaboración, puedes contactarme.
                         </p>
+
+                        <div class="contact-info">
+                            <a href="mailto:correo@ejemplo.com" class="contact-item">
+                                <span>Correo</span>
+                                <strong>josuechiriboga@protonmail.com</strong>
+                            </a>
+
+                            <a href="#" class="contact-item">
+                                <span>LinkedIn</span>
+                                <strong>linkedin.com/in/tu-perfil</strong>
+                            </a>
+
+                            <a href="#" class="contact-item">
+                                <span>GitHub</span>
+                                <strong>github.com/JoseChiribogaMite</strong>
+                            </a>
+                        </div>
                     </div>
 
-                    <div class="contact-info">
-                        <a href="mailto:correo@ejemplo.com" class="contact-item">
-                            <span>Correo</span>
-                            <strong>josuechiriboga@protonmail.com</strong>
-                        </a>
+                    <form id="form-contacto" class="contact-form">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" autocomplete="name" required>
+                        </div>
 
-                        <a href="#" class="contact-item">
-                            <span>LinkedIn</span>
-                            <strong>linkedin.com/in/tu-perfil</strong>
-                        </a>
+                        <div class="form-group">
+                            <label for="correo">Correo electrónico</label>
+                            <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" autocomplete="email" required>
+                        </div>
 
-                        <a href="#" class="contact-item">
-                            <span>GitHub</span>
-                            <strong>github.com/JoseChiribogaMite</strong>
-                        </a>
-                    </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <p class="form-feedback" role="status" hidden>
+                            ¡Gracias por tu mensaje! Este formulario es de demostración y no envía datos.
+                        </p>
+                    </form>
                 </div>
             </div>
         </section>
@@ -247,6 +269,15 @@
             <p>Portafolio profesional Josue Chiriboga · HTML5 · CSS3 · JavaScript</p>
         </div>
     </footer>
+
+    <script>
+        document.getElementById('form-contacto').addEventListener('submit', function (event) {
+            event.preventDefault();
+            var feedback = document.querySelector('.form-feedback');
+            feedback.hidden = false;
+            this.reset();
+        });
+    </script>
 
 </body>
 </html>

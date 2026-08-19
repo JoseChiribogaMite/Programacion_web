@@ -1,0 +1,20 @@
+# Ignorar carpetas del entorno virtual
+venv/
+.venv/
+env/
+.codewhale
+# Ignorar archivos de base de datos SQLite
+*.db
+*.db-*journal
+
+# Ignorar archivos de entorno (contienen credenciales sensibles)
+.env
+
+# Ignorar archivos temporales y de logs (si los generas)
+*.log
+*.tmp
+*.swp
+
+# Ignorar archivos específicos del IDE (ej. VS Code)
+.vscode/
+.idea/
